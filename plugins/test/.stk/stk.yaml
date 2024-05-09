@@ -1,0 +1,31 @@
+schema-version: v2
+kind: manifest
+spec:
+  type: app
+  plugins:
+    - name: local/calculator-subtract@0.0.1
+      alias: calculator-subtract-1715252836064
+      type: app
+      inputs:
+        resource: Client
+        method: GET
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: local/calculator-sum@0.0.1
+      alias: calculator-sum-1715252862516
+      type: app
+      inputs:
+        resource: Client
+        method: GET
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
