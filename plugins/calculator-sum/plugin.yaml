@@ -45,12 +45,12 @@ spec:
       changes:
         - insert:
             line: 0
-            value: "import sum"
+            value: "import sum\n"
             when:
               not-exists: "import sum"
         - search:
             string: "# call"
             insert-after:
-              value: "print('sum: ' + sum.sum(1,1))"
+              value: "print('sum: ' + sum.sum(1,1))\n"
             when:
               not-exists: "print('sum: ' + sum.sum(1,1))"

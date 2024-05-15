@@ -45,12 +45,12 @@ spec:
       changes:
         - insert:
             line: 0
-            value: "import subtract"
+            value: "import subtract\n"
             when:
               not-exists: "import subtract"
         - search:
             string: "# call"
             insert-after:
-              value: "print('subtract: ' + subtract.subtract(1,1))"
+              value: "print('subtract: ' + subtract.subtract(1,1))\n"
             when:
               not-exists: "print('subtract: ' + subtract.subtract(1,1))"
