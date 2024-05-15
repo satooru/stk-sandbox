@@ -43,15 +43,19 @@ spec:
       trigger: after-render
       path: ./calculator.py
       changes:
-        - insert:
+        - search:
           string: "# import"
           insert-after:
             value: "import sum"
+          when:
+            not-exists: "import sum"
     - type: edit
       trigger: after-render
       path: ./calculator.py
       changes:
-        - insert:
+        - search:
           string: "# call"
           insert-after:
             value: "print(sum.sum(1,1))"
+          when:
+            not-exists: "print(sum.sum(1,1))"

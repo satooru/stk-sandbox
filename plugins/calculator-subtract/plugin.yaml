@@ -43,15 +43,19 @@ spec:
       trigger: after-render
       path: ./calculator.py
       changes:
-        - insert:
+        - search:
           string: "# import"
           insert-after:
             value: "import subtract"
+          when:
+            not-exists: "import subtract"
     - type: edit
       trigger: after-render
       path: ./calculator.py
       changes:
-        - insert:
+        - search:
           string: "# call"
           insert-after:
             value: "print(subtract.subtract(1,1))"
+          when:
+            not-exists: "print(subtract.subtract(1,1))"
