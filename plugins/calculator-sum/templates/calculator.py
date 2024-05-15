@@ -1,3 +1,3 @@
-import sum
+# import
 
-print(sum.sum(1,1))
+# call
