@@ -1,0 +1,3 @@
+criar outra .feature de teste
+    rodar o teste de forma que nao reconheca as steps em comum
+configurar o conftest.py conforme https://stackoverflow.com/questions/52265620/pytest-bdd-importing-common-steps
